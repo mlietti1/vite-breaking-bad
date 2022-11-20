@@ -22,9 +22,11 @@ export default {
   },
   methods:{
     getCharacters(){
+      store.isLoaded = false
       axios.get(store.apiUrl)
         .then(result => {
-          store.charactersListData = result.data
+          store.charactersListData = result.data;
+          store.isLoaded = true;
         })
         .catch (error => {
           console.log(error);
