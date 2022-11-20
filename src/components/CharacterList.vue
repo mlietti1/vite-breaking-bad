@@ -17,11 +17,16 @@ export default {
 
 <template>
   <div class="container">
-    <CharacterCard v-for="character in store.charactersListData" :key="character.char_id" :character="character" />
+    <div class="d-flex flex-wrap">
+      <CharacterCard v-for="character in store.charactersListData" :key="character.char_id" :character="character" />
+    </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
 
+.container {
+  background-color: white;
+}
 
 </style>
