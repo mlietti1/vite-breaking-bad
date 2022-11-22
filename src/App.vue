@@ -4,7 +4,7 @@ import axios from 'axios';
 import {store} from './data/store';
 
 import AppHeader from './components/AppHeader.vue';
-import AppSearch from './components/AppSearch.vue';
+import AppSelect from './components/AppSelect.vue';
 import CharacterList from './components/CharacterList.vue';
 
 
@@ -17,7 +17,7 @@ export default {
   },
   components: {
     AppHeader,
-    AppSearch,
+    AppSelect,
     CharacterList
   },
   methods:{
@@ -46,7 +46,7 @@ export default {
 <template>
   <AppHeader title="Breaking Bad Api" />
   <main>
-    <AppSearch />
+    <AppSelect />
     <CharacterList />
   </main>
 </template>
