@@ -1,12 +1,28 @@
 <script>
+
+import { store } from '../data/store';
+
 export default {
-  name: 'AppSearch'
+  name: 'AppSearch',
+  data(){
+    return{
+      store
+    }
+  }
 }
 </script>
 
 <template>
   <div class="container">
-    ricerca
+    <div class="row mb-4">
+      <div class="col-auto">
+        <select v-model="store.categoryToSelect" class="form-select" aria-label="Default select example">
+          <option value="" selected>Select Category</option>
+          <option value="Breaking Bad">Breaking Bad</option>
+          <option value="Better Call Saul">Better Call Saul</option>
+        </select>
+      </div>
+    </div>
   </div>
 </template>
 

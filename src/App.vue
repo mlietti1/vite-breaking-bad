@@ -23,7 +23,11 @@ export default {
   methods:{
     getCharacters(){
       store.isLoaded = false
-      axios.get(store.apiUrl)
+      axios.get(store.apiUrl, {
+        params:{
+          category: store.categoryToSelect
+        }
+      })
         .then(result => {
           store.charactersListData = result.data;
           store.isLoaded = true;

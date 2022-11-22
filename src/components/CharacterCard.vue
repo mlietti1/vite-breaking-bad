@@ -10,7 +10,7 @@ export default {
 <template>
 
   <div class="mc-card p-3">
-    <img :src="character.img" alt="character.name">
+    <img :src="character.img" :alt="character.name">
     <div>
       <h5>{{character.name}}</h5>
       <p>{{character.category}}</p>
