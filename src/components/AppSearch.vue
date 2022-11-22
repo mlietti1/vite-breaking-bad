@@ -3,7 +3,7 @@
 import { store } from '../data/store';
 
 export default {
-  name: 'AppSelect',
+  name: 'AppSearch',
   data(){
     return{
       store
