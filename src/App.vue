@@ -6,7 +6,7 @@ import {store} from './data/store';
 import AppHeader from './components/AppHeader.vue';
 import AppSearch from './components/AppSearch.vue';
 import CharacterList from './components/CharacterList.vue';
-
+import ResultCharacters from './components/ResultCharacters.vue';
 
 export default {
   name: 'App',
@@ -18,7 +18,8 @@ export default {
   components: {
     AppHeader,
     AppSearch,
-    CharacterList
+    CharacterList,
+    ResultCharacters
   },
   methods:{
     getCharacters(){
@@ -47,6 +48,7 @@ export default {
   <AppHeader title="Breaking Bad Api" />
   <main>
     <AppSearch @selectCategory="getCharacters()" />
+    <ResultCharacters />
     <CharacterList />
   </main>
 </template>
