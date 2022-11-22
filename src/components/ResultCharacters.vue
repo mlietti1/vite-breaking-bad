@@ -6,13 +6,18 @@ export default {
     return{
       store
     }
+  },
+  computed: {
+    resultString(){
+      return 'Characters found: ' + store.charactersListData.length;
+    }
   }
 }
 </script>
 
 <template>
   <div class="container">
-    <p>Characters found: {{store.charactersListData.length}}</p>
+    <p>{{resultString}}</p>
   </div>
 </template>
 
