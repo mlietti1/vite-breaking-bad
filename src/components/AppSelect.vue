@@ -16,7 +16,7 @@ export default {
   <div class="container">
     <div class="row mb-4">
       <div class="col-auto">
-        <select v-model="store.categoryToSelect" class="form-select" aria-label="Default select example">
+        <select @change="$emit('selectCategory')" v-model="store.categoryToSelect" class="form-select" aria-label="Default select example">
           <option value="" selected>Select Category</option>
           <option value="Breaking Bad">Breaking Bad</option>
           <option value="Better Call Saul">Better Call Saul</option>

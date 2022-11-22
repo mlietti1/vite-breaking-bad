@@ -46,7 +46,7 @@ export default {
 <template>
   <AppHeader title="Breaking Bad Api" />
   <main>
-    <AppSelect />
+    <AppSelect @selectCategory="getCharacters()" />
     <CharacterList />
   </main>
 </template>
